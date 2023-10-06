@@ -1,11 +1,13 @@
 package com.ophi.rickandmorty.ui
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.google.android.material.transition.Hold
 import com.ophi.rickandmorty.data.response.ResultsItem
 import com.ophi.rickandmorty.databinding.ItemCardBinding
 
@@ -29,6 +31,11 @@ class CharacterAdapter: ListAdapter<ResultsItem, CharacterAdapter.MyViewHolder>(
         val character = getItem(position)
         holder.bind(character)
 
+        holder.itemView.setOnClickListener {
+            val intentDetail = Intent(holder.itemView.context, DetailActivity::class.java)
+            intentDetail.putExtra("id", character.id)
+            holder.itemView.context.startActivity(intentDetail)
+        }
     }
 
     companion object {

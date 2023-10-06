@@ -29,11 +29,12 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="8dp"
+            android:fontFamily="@font/poppins_bold"
+            android:maxLines="1"
             android:text="@string/name"
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:maxLines="1"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/img_char" />
@@ -43,6 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
+            android:fontFamily="@font/poppins_italic"
             android:text="@string/species"
             android:textAlignment="center"
             android:textSize="14sp"
@@ -50,7 +52,8 @@
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toBottomOf="@+id/tv_name" />
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_name"
+            card_view:layout_constraintVertical_bias="0.6" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
