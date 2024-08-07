@@ -28,6 +28,6 @@
     <td>Login Screen</td>
   </tr>
   <td>
-    <img src="assets/character_page.png" alt="Character Page" width="400px"/>
+    <img src="assets/character_page.png" alt="Character Page" width="300px"/>
   </td>
 </table>
