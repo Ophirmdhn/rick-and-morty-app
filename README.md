@@ -1,16 +1,33 @@
-# rick_and_morty_app
+# Rick and Morty app
 
-A new Flutter project.
+<p>
+  Penerapan Clean Architecture Flutter untuk menampilkan list data character dari API <a href="https://rickandmortyapi.com/">Rick & Morty</a>
+</p>
 
-## Getting Started
+## Library
+- equatable
+- dartz
+- http
+- bloc
+- flutter_bloc
 
-This project is a starting point for a Flutter application.
+## Language and Tools
 
-A few resources to get you started if this is your first Flutter project:
+<div>
+  <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="badge dart"/>
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="badge flutter"/>
+  <img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" alt="badge vs code"/>
+  <img src="https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white" alt="badge xcode"/>
+  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white" alt="badge postman"/>
+</div>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Screenshots
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<table>
+  <tr>
+    <td>Login Screen</td>
+  </tr>
+  <td>
+    <img src="assets/character_page.png" alt="Character Page" width="400px"/>
+  </td>
+</table>
