@@ -23,7 +23,8 @@ final getAllCharacterProvider = Provider<GetAllCharacter>(
 final characterProvider = FutureProvider<List<Character>>(
   (ref) async {
     final getAllCharacter = ref.watch(getAllCharacterProvider);
-    final result = await getAllCharacter.execute(3);
+    final result = await getAllCharacter.execute(2);
+
     return result.fold(
       (leftResult) {
         throw Exception(leftResult);

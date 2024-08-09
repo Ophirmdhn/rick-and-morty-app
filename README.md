@@ -5,7 +5,6 @@
 </p>
 
 ## Library / Dependencies
-- equatable
 - dartz
 - http
 - flutter_riverpod

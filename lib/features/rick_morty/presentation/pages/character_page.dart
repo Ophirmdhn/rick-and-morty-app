@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rick_and_morty_app/features/rick_morty/domain/entities/character.dart';
-import 'package:rick_and_morty_app/features/rick_morty/presentation/riverpod/character_provider.dart';
+import 'package:rick_and_morty_app/features/rick_morty/presentation/providers/character_provider.dart';
 import 'package:rick_and_morty_app/features/rick_morty/presentation/widgets/character_card.dart';
 
 class CharacterPage extends ConsumerStatefulWidget {
@@ -27,10 +27,6 @@ class CharacterPageState extends ConsumerState<CharacterPage> {
 
           if (snapshot.hasError) {
             return Center(child: Text('Error: ${snapshot.error}'));
-          }
-
-          if (!snapshot.hasData || snapshot.data!.isEmpty) {
-            return const Center(child: Text("Tidak ada Data!"));
           }
 
           final characters = snapshot.data!;

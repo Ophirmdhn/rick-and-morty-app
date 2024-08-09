@@ -1,14 +1,12 @@
-import 'package:equatable/equatable.dart';
+class Failure {
+  final String message;
 
-abstract class Failure extends Equatable {
-  const Failure([List<dynamic> props = const <dynamic>[]]);
+  const Failure(this.message);
+
+  @override
+  String toString() => message;
 }
 
 class GeneralFailure extends Failure {
-  final String message;
-
-  const GeneralFailure({required this.message});
-
-  @override
-  List<Object?> get props => [message];
+  const GeneralFailure({required String message}) : super(message);
 }
