@@ -18,7 +18,8 @@ class CharacterRepositoryImpl extends CharacterRepository {
       return Right(result);
     } catch (e) {
       return const Left(
-          GeneralFailure(message: "Tidak dapat mengambil data Character!"));
+        GeneralFailure(message: "Tidak dapat mengambil data Character!"),
+      );
     }
   }
 }
