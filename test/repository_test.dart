@@ -9,6 +9,6 @@ void main() async {
   var response = await characterRemoteDatasourceImpl.getAllCharacter(1);
 
   for (var dataUser in response) {
-    log("Tes Datasource ${dataUser.toJson()}");
+    log("Tes Datasource $dataUser");
   }
 }

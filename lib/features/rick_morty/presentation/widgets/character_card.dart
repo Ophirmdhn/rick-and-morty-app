@@ -21,10 +21,8 @@ class CharacterCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Expanded(
-              // padding: const EdgeInsets.all(8.0),
               child: Container(
                 width: double.infinity,
-                // height: 220,
                 decoration: BoxDecoration(
                   borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(16),
@@ -39,6 +37,9 @@ class CharacterCard extends StatelessWidget {
             const SizedBox(height: 8),
             Text(
               character.name,
+              maxLines: 1,
+              overflow: TextOverflow.clip,
+              textAlign: TextAlign.center,
               style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,

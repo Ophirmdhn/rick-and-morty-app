@@ -1,18 +1,30 @@
-import 'package:equatable/equatable.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-class Character extends Equatable {
-  final int id;
-  final String name;
-  final String status;
-  final String imageUrl;
+part 'character.freezed.dart';
 
-  const Character({
-    required this.id,
-    required this.name,
-    required this.status,
-    required this.imageUrl,
-  });
+@freezed
+class Character with _$Character {
+  const factory Character({
+    required int id,
+    required String name,
+    required String status,
+    required String imageUrl,
+  }) = _Character;
 
-  @override
-  List<Object?> get props => [id, name, status, imageUrl];
+  factory Character.fromJSON(Map<String, dynamic> json) =>
+      Character(
+        id: json["id"],
+        name: json["name"],
+        status: json["status"],
+        imageUrl: json["image"],
+      );
+
+  // Parsing data dari List<Map> ke List<CharacterModel>
+  static List<Character> fromJsonList(List<dynamic> data) {
+    if (data.isEmpty) return [];
+
+    return data
+        .map((json) => Character.fromJSON(json as Map<String, dynamic>))
+        .toList();
+  }
 }

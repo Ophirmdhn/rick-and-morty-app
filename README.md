@@ -4,11 +4,18 @@
   Penerapan Clean Architecture Flutter untuk menampilkan list data character dari API <a href="https://rickandmortyapi.com/">Rick & Morty</a>
 </p>
 
-## Library
+## Library / Dependencies
 - equatable
 - dartz
 - http
 - flutter_riverpod
+- freezed_annotation
+- json_annotation
+
+## Dev Dependencies
+- build_runner
+- freezed
+- json_serializable
 
 ## Language and Tools
 

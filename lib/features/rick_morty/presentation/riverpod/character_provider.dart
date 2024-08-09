@@ -15,7 +15,7 @@ final characterRepositoryProvider = Provider<CharacterRepository>(
 
 final getAllCharacterProvider = Provider<GetAllCharacter>(
   (ref) {
-    final characterRepository = ref.read(characterRepositoryProvider);
+    final characterRepository = ref.watch(characterRepositoryProvider);
     return GetAllCharacter(characterRepository: characterRepository);
   },
 );
@@ -23,12 +23,12 @@ final getAllCharacterProvider = Provider<GetAllCharacter>(
 final characterProvider = FutureProvider<List<Character>>(
   (ref) async {
     final getAllCharacter = ref.watch(getAllCharacterProvider);
-    final result = await getAllCharacter.execute(2);
+    final result = await getAllCharacter.execute(3);
     return result.fold(
-      (failure) {
-        throw Exception(failure);
+      (leftResult) {
+        throw Exception(leftResult);
       },
-      (characters) => characters,
+      (rightResult) => rightResult,
     );
   },
 );
