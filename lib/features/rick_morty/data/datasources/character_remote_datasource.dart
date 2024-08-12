@@ -14,7 +14,12 @@ class CharacterRemoteDatasourceImpl extends CharacterRemoteDatasource {
     var response = await http.get(url);
 
     Map<String, dynamic> dataBody = jsonDecode(response.body);
-    List<dynamic> data = dataBody["results"]; // nama json list menampung object
-    return Character.fromJsonList(data);
+    // nama json list menampung object
+    List<dynamic> data = dataBody["results"];
+
+    // Parsing data dari List<Map> ke List<Character>
+    return data
+        .map((json) => Character.fromJSON(json as Map<String, dynamic>))
+        .toList();
   }
 }
